@@ -30,8 +30,8 @@
 //     isMarried: false
 // };
 
-// console.log(obj.name); // способ вывода значения ключа обьекта
-// console.log(obj['name']); // способ вывода значения ключа обьекта
+//  console.log(obj.name); // способ вывода значения ключа обьекта
+//  console.log(obj['name']); // способ вывода значения ключа обьекта
 
 //          // 0            1           2   3  4   - заданные по умолчанию ключи как у обьекта
 // let arr = ['plum.png', 'orange.jpg', 6, {}, []]; // у массива порядковый номер наинается с 0
@@ -45,7 +45,7 @@
 // console.log(result); - в переменной отодражаеться результат дейсвий польз. в виде типа данных Boolean:true/false
 
 // const answer = prompt('Are you 18?', '18'); - когда нужет свободный ответ от пользователя
-//                           вопрос   , пишем default значение(значение по умолчанию), placeholder или оставляем пустые кавычки 
+//                           вопрос, пишем default значение(значение по умолчанию), placeholder или оставляем пустые кавычки 
 
 // console.log(typeof(answer)); - ответ, который напишет пользователь будет отображаться в консоле, то есть в переменной answer лежит ответ-значение в виде строки
 //                              - чтобы не ответил пользователь данные будут в виде типа данных - строки
@@ -54,7 +54,7 @@
 //  !!!!!! ВСЯ ИНФО ПРИХОДЯЩАЯ ОТ ПОЛЬЗОВАТЕЛЯ - В ВИДЕ СТРОК ВНЕ ЗАВИСИМОСТИ ОТ ТОГО КАК МЫ ЕЕ ПОЛУЧИЛИ
 //         НО С ПОМОЩИ НЕКОТОРЫХ ОПЕРАЦИЙ МОЖНО ПРЕОБРАЗОВОВАТЬ ОДИН ТИП ДАННЫХ В ДРУГОЙ:
 
-// const answer = +prompt('Are you 18?', '18'); - +преобразовывает данные в тип данных - цифры
+// const answer = +prompt('Are you 18?', '18'); - +преобразовывает в тип дан.-цифры (ставить прям перед строкой)
 
 // const answer = prompt('Are you 18?', '18');
 // console.log(answer + 5); 
@@ -71,10 +71,103 @@
 
 // // 8. Интерполяция (ЕS6) - значит, что мы прямо внутри строки можем вставлять значение переменной
 
-const category = 'toys';
-console.log(`I want my ${category}`);
+// const category = 'toys';
+// console.log(`I want my ${category}`);
 
-const nam = 'Vlada';
-alert(`My name is ${nam}/6`);
+// const nam = 'Vlada';
+// alert(`My name is ${nam}/6`);
 
-console.log(typeof category);
+// console.log(typeof category);
+
+// // 9. Операторы в JS 
+// математические - это +(основной), -, *, /, <, =, >, <=, >=, %(возвращ.остаток от деления двух чисел)
+// логические - && (и) когда два или больше правдивых выражений
+//              || (или) когда хотя бы один из вариантов правдивый
+
+// строка+строка=строка ("a" + "f" - результат выведет af) 
+// строка+цифра=строка ("a" + 5 - результат выведет a5)
+
+// console.log('arr' + ' - object');
+// console.log(6 + +' - object');
+// console.log(6 + +'5');
+
+// let incr = 10,
+//     decr = 10; 
+// ++incr; 
+// --decr;
+// console.log(incr++);
+// console.log(decr--);
+
+// console.log(++incr);
+// console.log(--decr);
+
+// console.log(5%2); - делит на столько раз сколько возможно и возвращ.остаток, в этом примере 1
+
+// console.log(2*4 == 8);
+// console.log(2*4 == '8');
+// console.log(2*4 === '8');
+// console.log(2*4 === 8);
+
+// const isChecked = true,
+//       isClose = false;
+      
+// console.log(isChecked || isClose);     
+// console.log(isChecked && isClose);
+
+// const isChecked = false,
+// isClose = false;
+// console.log(isChecked || !isClose); 
+
+// console.log(2 + 2 * 2 != 6);
+// console.log(2 + 2 * 2 != '6');
+// console.log(2 + 2 * 2 !== '6');
+
+// // 12. Практика ч.1
+
+// 1. const numberOfFilms = +prompt ("How many films did you watch?", "");
+// console.log(numberOfFilms);
+
+// 2. const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [], 
+//     privat: false
+// };
+
+// 3. const first = prompt ('What film did you watch the last?', '');
+// const second = prompt ('-?', '');
+// const third = prompt ('What film did you watch the last?', '');
+// const fourth = prompt ('-?', '');
+
+// personalMovieDB.movies[first] = second; - записали свойство в обьект (ключ:значение) и также можно менять значение ключа
+// personalMovieDB.movies[third] = fourth;
+
+// const five = '5';
+// personalMovieDB.movies.six = five; - создало новый ключ
+
+
+// console.log(personalMovieDB);
+// console.log(personalMovieDB['movies']);
+
+
+"use strict"
+
+const numberOfFilms = +prompt ('How many films did you watch?', '');
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+const one = prompt ('What last film did you watch?', '');
+const two = +prompt ('How much do you rate it?', '');
+const three = prompt ('What last film did you watch?', '');
+const four = +prompt ('What last film did you watch?', '');
+
+personalMovieDB.movies[one] = two;
+personalMovieDB.movies[three] = four;
+
+console.log(personalMovieDB);

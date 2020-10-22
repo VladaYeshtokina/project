@@ -143,7 +143,8 @@
 // personalMovieDB.movies[first] = second; - записали свойство в обьект (ключ:значение) и также можно менять значение ключа
 // personalMovieDB.movies[third] = fourth;
 
-// const five = '5';
+// const five = '5'; - 
+// personalMovieDB.movies[third] = five; - изменили значение ключа third, будет писать 5 вместо указаного пользователем ответа
 // personalMovieDB.movies.six = five; - создало новый ключ
 
 
@@ -162,12 +163,12 @@ const personalMovieDB = {
     genres: [],
     privat: false
 };
-const one = prompt ('What last film did you watch?', '');
-const two = +prompt ('How much do you rate it?', '');
-const three = prompt ('What last film did you watch?', '');
-const four = +prompt ('What last film did you watch?', '');
+const a = prompt ('What last film did you watch?', ''),
+      b = prompt ('How much do you rate it?', ''),
+      c = prompt ('What last film did you watch?', ''),
+      d = prompt ('How much do you rate it?', '');
 
-personalMovieDB.movies[one] = two;
-personalMovieDB.movies[three] = four;
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
 console.log(personalMovieDB);

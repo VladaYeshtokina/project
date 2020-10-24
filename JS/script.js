@@ -47,17 +47,24 @@
 // const answer = prompt('Are you 18?', '18'); - когда нужет свободный ответ от пользователя
 //                           вопрос, пишем default значение(значение по умолчанию), placeholder или оставляем пустые кавычки 
 
-// console.log(typeof(answer)); - ответ, который напишет пользователь будет отображаться в консоле, то есть в переменной answer лежит ответ-значение в виде строки
+// const name = 46; 
+// const age = confirm(name); - в alert, confirm, prompt можно вставить переменную
+// console.log(age);
+
+// console.log(typeof answer ); - ответ, который напишет пользователь будет отображаться в консоле, то есть в переменной answer лежит ответ-значение в виде строки
 //                              - чтобы не ответил пользователь данные будут в виде типа данных - строки
-//             (typeof(...)) - спец.оператор при помощи которого можно проверить на типы данных
+//             (typeof ... ) - метод при помощи которого можно проверить на типы данных
 
 //  !!!!!! ВСЯ ИНФО ПРИХОДЯЩАЯ ОТ ПОЛЬЗОВАТЕЛЯ - В ВИДЕ СТРОК ВНЕ ЗАВИСИМОСТИ ОТ ТОГО КАК МЫ ЕЕ ПОЛУЧИЛИ
 //         НО С ПОМОЩИ НЕКОТОРЫХ ОПЕРАЦИЙ МОЖНО ПРЕОБРАЗОВОВАТЬ ОДИН ТИП ДАННЫХ В ДРУГОЙ:
 
-// const answer = +prompt('Are you 18?', '18'); - +преобразовывает в тип дан.-цифры (ставить прям перед строкой)
+// let answer = Number(prompt('Are you 18?')); - Number() - метод, который преобразовывает в тип дан.-цифры (ставить прям перед строкой)
+// answer = Number(answer)
+// console.log(answer);
+// console.log(typeof answer);
 
-// const answer = prompt('Are you 18?', '18');
-// console.log(answer + 5); 
+// console.log(typeof 'Hello');
+
 
 // const answers = [];
 //   answers[0] = prompt('What is your name?', '');
@@ -65,9 +72,12 @@
 //   answers[2] = prompt('How old are you?', '');
 // document.write(answers);
 
-// console.log(typeof(answers));
-// console.log(typeof(null)); - официально признанная ошибка - консоль показывает тип данных-объект
+// console.log(typeof answers);
+// console.log(typeof null); - официально признанная ошибка - консоль показывает тип данных-объект
 
+
+// const type = typeOf 10;
+// console.log(type);
 
 // // 8. Интерполяция (ЕS6) - значит, что мы прямо внутри строки можем вставлять значение переменной
 
@@ -88,8 +98,8 @@
 // строка+цифра=строка ("a" + 5 - результат выведет a5)
 
 // console.log('arr' + ' - object');
-// console.log(6 + +' - object');
-// console.log(6 + +'5');
+// console.log(6 + Number(' - object'));
+// console.log(6 + Number('5'));
 
 // let incr = 10,
 //     decr = 10; 
@@ -124,7 +134,7 @@
 
 // // 12. Практика ч.1
 
-// 1. const numberOfFilms = +prompt ("How many films did you watch?", "");
+// 1. const numberOfFilms = Numbet(prompt ("How many films did you watch?"));
 // console.log(numberOfFilms);
 
 // 2. const personalMovieDB = {
@@ -174,4 +184,72 @@
 
 // console.log(personalMovieDB);
 
-console.log(typeof function ());
+// // 13. Условия
+
+// if (4 == 9) {
+//   console.log('Ok!');
+// } else {
+//   console.log('Error');
+// }
+
+
+// const num = 5;
+//  if (num < 4) {
+//      console.log('Error');
+// } else if (num > 10) {
+//      console.log('Many');
+// } else {
+//     console.log('Ok!');
+// } - чтобы не допускать таких разветвлений использ. switch
+
+// const num = 5;
+// (num === 5) ? console.log('Ok!') : console.log('Error'); - тернарный оператор (в его работе учавствует три аргумента 1,2,3)
+//  условие(1)   если оно выполн(2)    есл оно не выполн(3) 
+// 4 + 4 -бинарный оператор
+// +'4'; -унарный оператор
+
+// switch - модификация if, которая поддерживает сразу несколько проверок и условий
+// const num = 50;
+// switch (num) {
+//     case 49:
+//         console.log('Error');
+//         break;
+//     case 100:
+//         console.log('Error');
+//         break;
+//     case 50:
+//         console.log('Ok!');
+//         break;
+//     default:
+//         console.log('Not this time');
+//         break;
+// }
+
+// // ***
+
+// let side = 50px - метод Number.parseInt(side);
+// let side = 20.34px - метод Number.parseFloat(side);
+
+// let salary = 30000.45378
+// salary = Number(salary.toFixed(2));
+// // salary = Number(salary);
+// console.log(salary);
+
+// const a = prompt('Enter the number');
+// const b = prompt('Enter degree');
+// // const c = Math.pow(a, b);
+// console.log(a **b);
+
+// const b = prompt('Enter degree');
+// const a = prompt('Enter the number') ** b;
+// console.log(a);
+
+// const b = prompt('Enter degree');
+// const a = Math.pow(prompt('Enter the number'), b);
+// console.log(a);
+
+const max = 80;
+const min = 10;
+
+const result = Math.random() * (max-min) + min;
+console.log(Math.round(1.7));

@@ -165,7 +165,7 @@
 // Проверено на ошибки, правильное решение
 // "use strict"
 
-// const numberOfFilms = +prompt ('How many films did you watch?', '');
+// const numberOfFilms = Number(prompt ('How many films did you watch?'));
 
 // const personalMovieDB = {
 //     count: numberOfFilms,
@@ -225,7 +225,7 @@
 //         break;
 // }
 
-// // ***
+// // 1. Modul 1 Webinar 1 JS GoIt
 
 // let side = 50px - метод Number.parseInt(side);
 // let side = 20.34px - метод Number.parseFloat(side);
@@ -248,8 +248,168 @@
 // const a = Math.pow(prompt('Enter the number'), b);
 // console.log(a);
 
-const max = 80;
-const min = 10;
 
-const result = Math.random() * (max-min) + min;
-console.log(Math.round(1.7));
+// const max = 80;
+// const min = 10;
+// const result = Math.random() * (max-min) + min;
+// const resultTwo = Math.round(Math.random() * (max-min) + min);
+
+// console.log(Math.round(1.7)); - округляет више 5
+
+// const x = 'Sergey';
+// const y = 'Vlada';
+// const z = 'Taor Carpathians'
+// const q = 23;
+// const w = `Гость ${x} и ${y} поселяются в ${z} номер ${q}`;
+// console.log(w);
+
+// let q = 'HuaWei';
+// q = q.toLowerCase(); - нижний регистр
+// .toUpperCase() - верхний регистр
+// console.log(q);
+
+// let q = 'SamSUnG';
+// console.log(q[4]);
+// console.log(q.slice(1).toLowerCase()); 
+
+// q = q[0] + q.slice(1).toLowerCase()
+// console.log(q);
+
+// const q = 'спам';
+// const w = 'распродажа';
+// const a = 'Привет, это не спам';
+// const s = 'Привет сегодня РАСПРОДАЖА приходи';
+
+// console.log(a.includes(q));
+// console.log(a.includes(w));
+// console.log(s.includes(q));
+// console.log(s.includes(w));
+
+// const aa = s.toLowerCase();
+// console.log(aa.includes(w)); или console.log(s.toLowerCase().includes(w))
+
+// Приведене к булю Boolean(value)
+
+// const x1 = 10;
+// const x2 = 30;
+// const number = 50;
+
+// console.log(`Число ${number} попадает в отрезок после ${x1}?`, number < x1);
+// console.log(`Число ${number} попадает в отрезок после ${x2}?`, number > x2);
+// console.log(`Число ${number} попадает в отрезок oт ${x1} до ${x2}?`, number === number > x1 && number < x2);
+
+// const a =  number > x1 && number < x2;
+// То как читает интерпритатор:
+// 50>10 && 50<30
+// true && false
+// false
+
+// console.log(`Число ${number} попадает в отрезок до ${x1} или после ${x2}?`,  number < x1 || number > x2);
+
+// const isOnline = true;
+// const isFriend = true;
+// const isDnd = false;
+
+// const canOpenChat = isOnline && isFriend && !isDnd;
+// console.log('Можно открыть чам?', canOpenChat);
+
+// const firstSubscription = 'pro';
+// const secondSubscription = 'vip';
+
+// const canAccessContent = firstSubscription === 'pro' || firstSubscription === 'vip';
+// const canAccessContent1 = secondSubscription === 'pro' || secondSubscription === 'vip';
+// console.log('Есть доступ к контенту?', canAccessContent);
+// console.log('Есть доступ к контенту?', canAccessContent1);
+
+// const balance = 1000;
+// const message = balance >= 0 ? 'Позитивный баланс' : 'Негативный баланс';
+
+// console.log(message);
+
+// const b = 10;
+
+// it (true) {
+//     console.log(b);
+//     const a = 5;
+//     console.log(a);
+// }
+// console.log(a);
+// console.log(b);
+
+// let balance = 10000;
+// const payment = 20000;
+
+// alert (`Oбщая стоимость заказа ${payment} кредитов. Проверяем количество доступных средств на счету`);
+
+// if (payment <= balance) {
+//     const a = balance - payment;
+//     alert(`На счету осталось ${a} кредитов`);
+//     alert('Все хорошо, снимаем деньги ... Спасибо за покупку!');
+// } else  {
+//     alert('На счету недостаточно средств для проведения операции');
+//     alert('Операция завершена');
+// }
+
+// // 14. Циклы
+
+// let num = 50;
+// while (num < 55) {      - читается: Пока наше условие не віполнено, віполняй следующие действия 
+//     console.log(num);   - while () - читается: пока наше условие выполняется, выполняй следующее действия
+//     num +=1;
+// }
+
+// let num = 50;
+// do {                    - читается: сначала сделай что-то, а потом проверь условие и віходи из цикла если нужно
+//     console.log(num);
+//     num +=1;
+// } 
+// while (num < 55);
+
+// for (let i = 1; i < 8; i += 1) {
+//     console.log(i);
+// }
+
+// for (let i = 1; i < 10; i += 1) {
+//     if (i === 6){
+//         break;
+//     }
+//     console.log(i);
+// }
+
+// // 2. Modul 1 Webinar 2 JS GoIt
+
+const stars = 1;
+let price;
+
+switch (stars) {
+    case 1: 
+      price = 20;
+    break;   
+}
+
+
+ //     case 2: price = 30;
+//     break;
+//     case 3: price = 50;
+//     break;
+//     case 4: price = 70;
+//     break;
+//     case 5: price = 120;
+//     break;
+//     default: console.log('Такого количества звезд нет');
+// }
+
+// if (stars === 1) {
+//     price = 20;
+// } else if (stars === 2) {
+//     price = 30;
+// } else if (stars === 3) {
+//     price = 50;
+// } else if (stars === 4) {
+//     price = 70;
+// } else if (stars === 5) {
+//     price = 120;
+// } else {
+//     console.log ('Такого количества звeзд нет');
+// }
+//   console.log(price);
